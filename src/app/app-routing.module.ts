@@ -6,9 +6,15 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { AuthGuard } from './guard/auth.guard';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', component: HomeComponent, canActivate: [AuthGuard] },
+
+
   { path: 'login', pathMatch: 'full', component: LoginComponent },
-  { path: '**', pathMatch: 'full', component: NotFoundComponent}
+  // { path: 'home', pathMatch: 'full', component: LoginComponent, canActivate: [AuthGuard]},
+  { path: '', pathMatch: 'full', component: HomeComponent , canActivate: [AuthGuard]},
+  { path: '**', component: NotFoundComponent},
+
+
+ 
 ];
 
 @NgModule({
