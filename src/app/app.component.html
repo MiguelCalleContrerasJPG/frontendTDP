@@ -6,4 +6,11 @@
     <li><a routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page">Login</a></li>
   </ul>
 </nav>
+<form class="form-font" [formGroup]="formulario"  >
+<input formControlName="nombre" type="text" name="" id="Nombre">
+<input formControlName="pass" type="password" id="Pass"> 
+</form>
+<button (click)="LoginClick()">
+  Logueate 
+  </button>
 <router-outlet></router-outlet>
